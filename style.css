@@ -451,23 +451,68 @@ code, pre {
 }
 
 /* =========================================================
-   SEÇÃO: FORMAÇÃO (bloco de código JSON)
+   SEÇÃO: FORMAÇÃO (linha do tempo)
    ========================================================= */
 
-.code-block {
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.timeline-item {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 20px;
-  overflow-x: auto;
-  font-size: 0.85rem;
-  line-height: 1.7;
-  max-width: 640px;
+  padding: 18px 20px;
+  max-width: 560px;
 }
 
-.code-block .key { color: var(--accent-2); }
-.code-block .str { color: var(--ok); }
-.code-block .p { color: var(--text-muted); }
+.timeline-item h3 {
+  margin: 8px 0 4px;
+  font-size: 1.05rem;
+}
+
+.timeline-meta {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.status-progress {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.status-done {
+  background: rgba(95, 211, 141, 0.12);
+  color: var(--ok);
+}
+
+.subsection-title {
+  font-size: 1.05rem;
+  margin: 28px 0 10px;
+}
+
+.plain-list {
+  margin: 0 0 8px;
+  padding-left: 20px;
+  color: var(--text);
+}
+
+.plain-list li {
+  margin-bottom: 6px;
+}
 
 /* =========================================================
    SEÇÃO: PORTFÓLIO
