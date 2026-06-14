@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pablo Rycardo — Portfólio</title>
+
+  <!-- Fontes: uma monoespaçada (identidade "código") e uma para leitura -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra superior, visível apenas em telas pequenas -->
+  <header class="mobile-bar">
+    <button class="icon-btn" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span class="burger"></span>
+    </button>
+    <span class="mobile-title"><span class="muted">~/</span>pablo-rycardo<span class="muted">/portfolio</span></span>
+    <button class="icon-btn" id="theme-toggle-mobile" aria-label="Alternar tema">🌙</button>
+  </header>
+
+  <div class="ide">
+
+    <!-- ===================== SIDEBAR / EXPLORER ===================== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="window-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <span class="sidebar-label">EXPLORER</span>
+      </div>
+
+      <div class="profile">
+        <div class="avatar">PR</div>
+        <div class="profile-info">
+          <div class="profile-name">Pablo Rycardo</div>
+          <div class="profile-role">// estudante de ADS</div>
+        </div>
+      </div>
+
+      <nav class="file-tree" aria-label="Navegação principal">
+        <span class="tree-root">portfolio/</span>
+
+        <a href="#sobre" class="file-item is-active" data-target="sobre">
+          <span class="file-icon icon-md">M↓</span> sobre.md
+        </a>
+        <a href="#formacao" class="file-item" data-target="formacao">
+          <span class="file-icon icon-json">{ }</span> formacao.json
+        </a>
+        <a href="#portfolio" class="file-item" data-target="portfolio">
+          <span class="file-icon icon-folder">▸</span> projetos/
+        </a>
+        <a href="#contato" class="file-item" data-target="contato">
+          <span class="file-icon icon-sh">&gt;_</span> contato.sh
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button id="theme-toggle" class="theme-toggle">
+          <span class="theme-icon">🌙</span>
+          <span class="theme-label">modo escuro</span>
+        </button>
+        <div class="ru-stamp">RU 5515562 · São Luís, MA</div>
+      </div>
+    </aside>
+
+    <!-- overlay para fechar o menu mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ===================== CONTEÚDO ===================== -->
+    <main class="content">
+
+      <!-- ---------- SOBRE MIM ---------- -->
+      <section id="sobre" class="panel">
+        <div class="tab-bar">
+          <span class="tab active"><span class="file-icon icon-md">M↓</span> sobre.md</span>
+        </div>
+
+        <div class="panel-body">
+
+          <div class="terminal" aria-hidden="true">
+            <div class="terminal-titlebar">
+              <span class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </span>
+              <span class="terminal-name">bash — ~/ryc</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+              <!-- conteúdo gerado via JavaScript (efeito de digitação) -->
+            </div>
+          </div>
+
+          <div class="prose">
+            <h1>Olá, eu sou o Pablo — mas pode me chamar de <span class="accent">Ryc</span>.</h1>
+            <p>
+              Tenho 24 anos, moro em São Luís, no Maranhão, e atualmente curso
+              <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> na Uninter,
+              ainda nos semestres iniciais. Meu objetivo é seguir carreira como
+              <strong>desenvolvedor back-end Java</strong>, e este site é justamente
+              meu primeiro passo nessa direção: meu portfólio pessoal, feito do zero
+              em HTML, CSS e JavaScript puros.
+            </p>
+            <p>
+              Fora da programação, sou apaixonado por games — em especial
+              <strong>Battlefield 1</strong>, onde já me aventurei a fundo em
+              easter eggs e segredos do jogo (resolver puzzles e códigos no jogo não é
+              tão diferente de debugar um programa, aliás). Também ajudo minha família
+              no nosso negócio, uma loja de autopeças, o que me ensinou bastante sobre
+              organização, atendimento e responsabilidade.
+            </p>
+            <p>
+              Estou no início da minha jornada como programador, mas com bastante
+              motivação para aprender, evoluir e, no futuro, trabalhar com tecnologia
+              de forma profissional — inclusive buscando oportunidades
+              internacionais ao longo do caminho.
+            </p>
+
+            <ul class="tag-list" aria-label="Interesses e tecnologias">
+              <li class="tag">ADS · Uninter</li>
+              <li class="tag">Java (em formação)</li>
+              <li class="tag">Python</li>
+              <li class="tag">SQL / MySQL</li>
+              <li class="tag">HTML · CSS · JS</li>
+              <li class="tag">Battlefield 1</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ---------- FORMAÇÃO ---------- -->
+      <section id="formacao" class="panel">
+        <div class="tab-bar">
+          <span class="tab active"><span class="file-icon icon-json">{ }</span> formacao.json</span>
+        </div>
+
+        <div class="panel-body">
+          <h2 class="section-title">Formação</h2>
+
+          <pre class="code-block" aria-label="Resumo da formação acadêmica em formato JSON"><code><span class="p">{</span>
+  <span class="key">"ensino_superior"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="key">"curso"</span><span class="p">:</span> <span class="str">"Análise e Desenvolvimento de Sistemas"</span><span class="p">,</span>
+    <span class="key">"instituicao"</span><span class="p">:</span> <span class="str">"Centro Universitário Internacional Uninter"</span><span class="p">,</span>
+    <span class="key">"modalidade"</span><span class="p">:</span> <span class="str">"EAD"</span><span class="p">,</span>
+    <span class="key">"status"</span><span class="p">:</span> <span class="str">"em andamento"</span>
+  <span class="p">},</span>
+  <span class="key">"ensino_medio"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="key">"instituicao"</span><span class="p">:</span> <span class="str">"Colégio Rosa de Saron"</span><span class="p">,</span>
+    <span class="key">"status"</span><span class="p">:</span> <span class="str">"concluído"</span>
+  <span class="p">},</span>
+  <span class="key">"em_andamento"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="str">"Trilha de Java back-end (curso Loiane Groner, YouTube)"</span><span class="p">,</span>
+    <span class="str">"Atividade extensionista: vídeos sobre segurança digital"</span>
+  <span class="p">],</span>
+  <span class="key">"idiomas"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="str">"Português (nativo)"</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre>
+
+          <p class="note">
+            Como ainda estou nos primeiros semestres do curso, esta seção vai
+            crescendo a cada disciplina concluída — este site também é, na prática,
+            um projeto contínuo.
+          </p>
+        </div>
+      </section>
+
+      <!-- ---------- PORTFÓLIO ---------- -->
+      <section id="portfolio" class="panel">
+        <div class="tab-bar">
+          <span class="tab active"><span class="file-icon icon-folder">▸</span> projetos/</span>
+        </div>
+
+        <div class="panel-body">
+          <h2 class="section-title">Portfólio</h2>
+          <p class="section-intro">
+            Trabalhos acadêmicos desenvolvidos durante o curso de ADS na Uninter.
+            Cada card abre o repositório de entrega correspondente.
+          </p>
+
+          <div class="project-grid">
+
+            <article class="project-card">
+              <div class="project-head">
+                <span class="project-lang lang-java">Java</span>
+                <h3>Cofrinho Multimoeda (POO)</h3>
+              </div>
+              <p>
+                Sistema de console que simula um "cofrinho" capaz de guardar valores
+                em Real, Dólar e Euro. Trabalho da disciplina de Programação Orientada
+                a Objetos, aplicando herança, classes abstratas, polimorfismo e
+                sobrescrita de <code>equals()</code> / <code>hashCode()</code>.
+              </p>
+              <ul class="project-meta">
+                <li>Classes <code>Moeda</code> (abstrata), <code>Real</code>, <code>Dolar</code>, <code>Euro</code> e <code>Cofrinho</code></li>
+                <li>Menu interativo via console (Scanner)</li>
+              </ul>
+              <a class="project-link" href="https://univirtus.uninter.com/ava/repositorio/SistemaRepositorioPublico?id=JcbQ9MzjileoVGF47aHO9hfO26IHuUPoEgu4io+6YG4ugiefpq+fpLV2N06yfpHHd3fAnPhVd6qh8SLORo3ejPKza8P3sjEGJQT6uD7/Eyl9hFnXhJzAS5ofHWZGCnNH" target="_blank" rel="noopener">
+                Ver entrega completa →
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-head">
+                <span class="project-lang lang-python">Python</span>
+                <h3>Lógica de Programação e Algoritmos</h3>
+              </div>
+              <p>
+                Conjunto de exercícios práticos: um programa que calcula o valor
+                mensal de um plano de saúde com base em faixas de idade, e um
+                sistema de pedidos para uma pizzaria com validação de entradas,
+                acumulador de valores e laços de repetição.
+              </p>
+              <ul class="project-meta">
+                <li>Estruturas <code>if / elif / else</code></li>
+                <li>Laços <code>while</code>, <code>break</code> e <code>continue</code></li>
+              </ul>
+              <a class="project-link" href="https://univirtus.uninter.com/ava/repositorio/SistemaRepositorioPublico?id=JcbQ9MzjileoVGF47aHO9i0iUMoUyWkVaL35t1stie4foFnkyaHER72dGCwdthL0fzqmd5Zrodpnjaqfx+HFDV9QgbtSVbKPhz8xw/8LDKBTNSnATuAKH1TJZk5hZ4iv" target="_blank" rel="noopener">
+                Ver entrega completa →
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-head">
+                <span class="project-lang lang-sql">SQL</span>
+                <h3>Banco de Dados Relacional</h3>
+              </div>
+              <p>
+                Modelagem conceitual (MER) de um sistema corporativo para gestão de
+                projetos, funcionários, peças e fornecedores, seguida da implementação
+                completa do banco "Empresa" em MySQL, incluindo tabelas, chaves
+                estrangeiras, inserção de dados e consultas com <code>JOIN</code> e
+                <code>GROUP BY</code>.
+              </p>
+              <ul class="project-meta">
+                <li>Modelo Entidade-Relacionamento (MER) e Modelo Relacional</li>
+                <li>Consultas SQL para relatórios de ordens de serviço</li>
+              </ul>
+              <a class="project-link" href="https://univirtus.uninter.com/ava/repositorio/SistemaRepositorioPublico?id=JcbQ9MzjileoVGF47aHO9jPobLyGU0w4Ui1jkCS/6dArw/ceiIXWKZ8xdKMZXg3G6Qr0MoTCw3HO/E/KUkmpO9tCEnMD8Bfo0ZZkEC1HUUGwW7coHbaNxwA1NBUBbOmp" target="_blank" rel="noopener">
+                Ver entrega completa →
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-head">
+                <span class="project-lang lang-uml">UML</span>
+                <h3>Análise e Modelagem de Sistemas</h3>
+              </div>
+              <p>
+                Levantamento de requisitos funcionais e não funcionais, diagrama de
+                caso de uso e diagrama de classes para um sistema fictício de
+                automação predial (controle de acesso, iluminação e climatização)
+                de uma empresa, com base em um estudo de caso em vídeo.
+              </p>
+              <ul class="project-meta">
+                <li>Diagrama de Caso de Uso (draw.io)</li>
+                <li>Diagrama de Classes (PlantUML)</li>
+              </ul>
+              <a class="project-link" href="https://univirtus.uninter.com/ava/repositorio/SistemaRepositorioPublico?id=JcbQ9MzjileoVGF47aHO9s9mNaekRjV/Aj4y3QPetfxy3k0491zoxqYWQnERRwLHihpe6Dq138MocfIZvuzos9OZy+P4Wp6Y+dqpoJFCT8ah1XKX2e0C1GZUr/5S7ISl" target="_blank" rel="noopener">
+                Ver entrega completa →
+              </a>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- CONTATO ---------- -->
+      <section id="contato" class="panel">
+        <div class="tab-bar">
+          <span class="tab active"><span class="file-icon icon-sh">&gt;_</span> contato.sh</span>
+        </div>
+
+        <div class="panel-body">
+          <h2 class="section-title">Contato</h2>
+          <p class="section-intro">
+            Preencha o formulário abaixo. Os campos são validados antes do envio
+            (este formulário é uma simulação, feita em JavaScript, para fins
+            acadêmicos).
+          </p>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="field">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name">
+              <span class="error-msg" id="erro-nome" role="alert"></span>
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email">
+              <span class="error-msg" id="erro-email" role="alert"></span>
+            </div>
+
+            <div class="field">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+              <span class="error-msg" id="erro-mensagem" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <span class="file-icon icon-sh">&gt;_</span> ./enviar.sh
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <span>© <span id="year"></span> Pablo Rycardo</span>
+        <span class="muted">·</span>
+        <a href="https://github.com/DoudRyc" target="_blank" rel="noopener">github.com/DoudRyc</a>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- ===================== MODAL DE CONFIRMAÇÃO ===================== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-icon">✓</div>
+      <h3 id="modal-title">Mensagem enviada com sucesso!</h3>
+      <p>Obrigado pelo contato — esta foi uma simulação de envio.</p>
+      <button class="btn-submit" id="modal-close">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
