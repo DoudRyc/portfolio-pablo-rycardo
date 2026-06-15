@@ -4,7 +4,7 @@ Portfólio pessoal desenvolvido para a Atividade Prática da disciplina
 **Fundamentos da Programação Web** (Uninter — Curso de Análise e
 Desenvolvimento de Sistemas).
 
-🔗 **Site publicado:** _adicione aqui o link do GitHub Pages_
+🔗 **Site publicado:** https://doudryc.github.io/portfolio-pablo-rycardo/
 
 ## Sobre o projeto
 
