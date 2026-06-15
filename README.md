@@ -22,6 +22,7 @@ frameworks**, usando apenas:
 ├── index.html        # Estrutura principal e conteúdo do site
 ├── style.css         # Estilos, layout responsivo e temas claro/escuro
 ├── script.js         # Tema, menu responsivo, terminal animado e validação do formulário
+├── arquivos/         # Arquivos das entregas mostradas na seção Portfólio
 └── README.md
 ```
 
@@ -37,10 +38,10 @@ frameworks**, usando apenas:
 
 ## Seções
 
-- **Sobre mim** (`sobre.md`)
-- **Formação** (`formacao.json`)
-- **Portfólio** (`projetos/`)
-- **Contato** (`contato.sh`)
+- **Sobre mim**
+- **Formação**
+- **Portfólio**
+- **Contato**
 
 ## Autor
 
